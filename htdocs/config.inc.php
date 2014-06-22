@@ -58,7 +58,9 @@ $cfg['Servers'][$index]['extension'] = ':';
 print "</br>Extension: {$cfg['Servers'][$index]['extension']}";
 $cfg['Servers'][$index]['AllowNoPassword'] = false;
 print "</br>Password: {$cfg['Servers'][$index]['AllowNoPassword']}";
-
+/*
+ * Extract Services details
+ */
 foreach ($services as $k=>$v){
 	print "</br>:X:{$v[0]['label']}:</br>"; // etc.
 	
@@ -83,7 +85,7 @@ foreach ($services as $k=>$v){
 	print "</br>Compress Mode: {$cfg['Servers'][$index]['compress']}";
 
 	/* Select mysql if your server does not have mysqli */
-	$cfg['Servers'][$index]['extension'] = 'mysqli';
+	$cfg['Servers'][$index]['extension'] = 'mysqli'; //TODO: Based on service type, we might be change type of driver
 	print "</br>Extension: {$cfg['Servers'][$index]['extension']}";
 	$cfg['Servers'][$index]['AllowNoPassword'] = false;
 	print "</br>Password: {$cfg['Servers'][$index]['AllowNoPassword']}";
