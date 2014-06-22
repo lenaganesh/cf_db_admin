@@ -22,7 +22,7 @@
 	cf files <app-name> logs/env.log
 	```
 1. Push your current change to CloudFoundry. (Ensure already target to your application through "cf target api.xxxxx.xxxx.com")
-	```$
+	```
 	cf push
 	```
 1. Access your site the following with username and password of the service. You can get from VCAP_SERVICES environment variable
