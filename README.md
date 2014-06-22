@@ -41,9 +41,9 @@ http://cfdbadmin.bluemix.net/config.inc.php
 
 
 ====================================================================
-###FROM ORIGINAL PROJECT (Dont confuse with the following content)
+##FROM ORIGINAL PROJECT (Dont confuse with the following content)
 ====================================================================
-## CloudFoundry PHP Example Application:  PHPMyAdmin
+### CloudFoundry PHP Example Application:  PHPMyAdmin
 
 This is an example application which can be run on CloudFoundry using the [PHP Build Pack].
 
