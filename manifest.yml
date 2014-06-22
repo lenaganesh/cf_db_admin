@@ -1,0 +1,10 @@
+---
+applications:
+- name: lgdbadmin
+  memory: 128M 
+  instances: 1
+  host: lgdbadmin	
+  path: .
+  buildpack: https://github.com/dmikusa-pivotal/cf-php-build-pack.git
+  services:
+  - mysqldb
