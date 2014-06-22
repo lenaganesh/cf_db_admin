@@ -34,6 +34,31 @@ print "Service Found:$services";
 
 $service = array();
 print "</br>Individual:</br>";
+
+/*
+ * Dummy
+ */
+$index++;
+$cfg['Servers'][$index]['auth_type'] = 'cookie';
+/* Server parameters */
+$cfg['Servers'][$index]['host'] = '-- SELECT SERVICE --';
+print "</br>HostName {$cfg['Servers'][$index]['host']}";
+
+$cfg['Servers'][$index]['port'] = '0';
+print "</br>Port: {$cfg['Servers'][$index]['port']}";
+
+$cfg['Servers'][$index]['connect_type'] = ':';
+print "</br>Connection Type: {$cfg['Servers'][$index]['connect_type']} ";
+
+$cfg['Servers'][$index]['compress'] = false;
+print "</br>Compress Mode: {$cfg['Servers'][$index]['compress']}";
+
+/* Select mysql if your server does not have mysqli */
+$cfg['Servers'][$index]['extension'] = ':';
+print "</br>Extension: {$cfg['Servers'][$index]['extension']}";
+$cfg['Servers'][$index]['AllowNoPassword'] = false;
+print "</br>Password: {$cfg['Servers'][$index]['AllowNoPassword']}";
+
 foreach ($services as $k=>$v){
 	print "</br>:X:{$v[0]['label']}:</br>"; // etc.
 	
