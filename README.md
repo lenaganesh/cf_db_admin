@@ -1,12 +1,12 @@
-#CloudFoundry/BlueMix support mode to find VCAP_SERVICES envriroment and listing to connect db connection
+##CloudFoundry/BlueMix support mode to find VCAP_SERVICES envriroment and listing to connect db connection
 
 1. If you dont have any service create it them through cf tool or through Cloud Service website
 	```bash
 	cf create-service cleardb spark mysqldb
 	```
 1. Modify the manifest.yml for your project related information
-	(1) - name: lgdbadmin 	==> Application Name which will be resist in your CloudFoundry/BlueMix service
-	(2) host: lgdbadmin   	==> Portal name which will be used to access your PHPmyAdmin. Ensure that this one will not be used/registered by others
+	(1) - name: cfdbadmin 	==> Application Name which will be resist in your CloudFoundry/BlueMix service
+	(2) host: cfdbadmin   	==> Portal name which will be used to access your PHPmyAdmin. Ensure that this one will not be used/registered by others
 	(3)services:
 		-mysqldb
 							==> Service name which you want to bind/access the db through PHPmyAdmin
@@ -20,7 +20,7 @@
 	cf push
 	```
 1. Access your site the following with username and password of the service. You can get from VCAP_SERVICES environment variable
-	http://lgdbadmin.stage1.mybluemix.net/
+	http://cfdbadmin.bluemix.net/
 	
 ### How It Works
 
@@ -32,15 +32,16 @@ When you push the application here's what happens.
 1. At this point, the build pack is done and CF runs our droplet.point, the build pack is done and CF runs our droplet.
 
 ==============
-Troubleshoot:
+###Troubleshoot:
 ==============
 1. If service is not listing in the drop down. check the 
 Check the source code :config.inc.php and result in browser
-http://lgdbadmin.stage1.mybluemix.net/config.inc.php
+http://cfdbadmin.bluemix.net/config.inc.php
+
 
 
 ====================================================================
-FROM ORIGINAL PROJECT (Dont confuse with the following content)
+###FROM ORIGINAL PROJECT (Dont confuse with the following content)
 ====================================================================
 ## CloudFoundry PHP Example Application:  PHPMyAdmin
 
