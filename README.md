@@ -1,5 +1,11 @@
 ##CloudFoundry/BlueMix support mode to find VCAP_SERVICES envriroment and listing to connect db connection
+1. Clone the app (i.e. this repo) or download it with zip format
 
+  ```$
+  git clone https://github.com/lenaganesh/cf_db_admin
+  cd cf_db_admin
+  ```
+  
 1. If you dont have any service create it them through cf tool or through Cloud Service website
 	```$
 	cf create-service cleardb spark mysqldb
