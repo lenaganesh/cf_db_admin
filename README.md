@@ -21,7 +21,7 @@
 	```$
 	cf files <app-name> logs/env.log
 	```
-1. Push your current change to CloudFoundry. (Ensure already target to your application through "cf target api.xxxxx.xxxx.com")
+1. Push your current change to CloudFoundry. (Ensure already target to your application through "cf target api.xxxxx.xxxx.com" and loged in to CloudFoundry/BlueMix)
 	```
 	cf push
 	```
