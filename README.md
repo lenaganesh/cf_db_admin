@@ -1,13 +1,13 @@
 ##CloudFoundry/BlueMix support mode to find VCAP_SERVICES envriroment and listing to connect db connection
 1. Clone the app (i.e. this repo) or download it with zip format
 
-  ```$
+  ```
   git clone https://github.com/lenaganesh/cf_db_admin
   cd cf_db_admin
   ```
   
 1. If you dont have any service create it them through cf tool or through Cloud Service website
-	```$
+	```
 	cf create-service cleardb spark mysqldb
 	```
 1. Modify the manifest.yml for your project related information
@@ -18,7 +18,7 @@
 							==> Service name which you want to bind/access the db through PHPmyAdmin
 
 1. Check the VCAP_SERVICES service through the following command
-	```$
+	```
 	cf files <app-name> logs/env.log
 	```
 1. Push your current change to CloudFoundry. (Ensure already target to your application through "cf target api.xxxxx.xxxx.com" and loged in to CloudFoundry/BlueMix)
